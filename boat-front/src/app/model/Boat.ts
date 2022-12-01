@@ -1,5 +1,5 @@
 export class Boat {
-    id: number;
-    nom: String;
-    description: string;
+    id!: number;
+    nom!: String;
+    description!: string;
 }
