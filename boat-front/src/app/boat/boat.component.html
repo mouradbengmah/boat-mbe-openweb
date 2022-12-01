@@ -1,0 +1,25 @@
+<div class="content" fxLayoutAlign="center">
+	<div fxFlex="70%">
+
+		<h1>Liste des bateaux</h1>
+
+		<div>
+			<button mat-raised-button color="accent" (click)="ouvrirDialogPourNouveauBateau()">Créer un bateau</button>
+		</div>
+
+		<mat-nav-list *ngFor="let boat of boatList">
+			<mat-card class="inline-block" fxLayout="column">
+				<mat-card-header>
+					<mat-card-title>{{boat.nom}}</mat-card-title>
+				</mat-card-header>
+				<mat-card-content>
+					<p>{{boat.description}}</p>
+				</mat-card-content>
+				<mat-card-actions>
+					<button mat-raised-button color="primary" routerLink="/boat/{{boat.id}}">Voir le détail</button>
+				</mat-card-actions>
+			</mat-card>
+		</mat-nav-list>
+
+	</div>
+</div>
