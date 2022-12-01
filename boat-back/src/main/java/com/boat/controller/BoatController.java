@@ -21,7 +21,7 @@ import com.boat.service.BoatService;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("boat")
+@RequestMapping("api/boat")
 @RequiredArgsConstructor
 @CrossOrigin(origins = "http://localhost:4200")
 public class BoatController {
