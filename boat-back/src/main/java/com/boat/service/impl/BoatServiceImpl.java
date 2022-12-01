@@ -35,8 +35,8 @@ public class BoatServiceImpl implements BoatService{
 
     @Override
     @Transactional
-    public Boat enregistrerUnBateau(BoatDTO scrumDTO) {
-        return boatRepository.save(convertDTOToBoat(scrumDTO));
+    public Boat enregistrerUnBateau(BoatDTO boatDTO) {
+        return boatRepository.save(convertDTOToBoat(boatDTO));
     }
 
     @Override
