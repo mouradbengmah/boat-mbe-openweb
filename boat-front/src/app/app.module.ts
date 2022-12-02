@@ -17,11 +17,13 @@ import { MatDialogModule } from "@angular/material/dialog";
 import { MatInputModule } from "@angular/material/input";
 import { MatSelectModule } from "@angular/material/select";
 import { MatCardModule } from "@angular/material/card";
+import { BoatNewComponent } from './boat-new/boat-new.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BoatComponent
+    BoatComponent,
+    BoatNewComponent
   ],
   imports: [
     BrowserModule,

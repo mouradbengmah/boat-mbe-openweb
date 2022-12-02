@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Boat } from '../model/Boat';
 import { BoatService } from '../service/boat.service';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { BoatNewComponent } from '../boat-new/boat-new.component';
 
 @Component({
   selector: 'app-boat',
@@ -27,7 +28,7 @@ export class BoatComponent implements OnInit {
     dialogConfig.data = {
       boat: new Boat()
     };
-    //this.dialog.open(BoatDialogComponent, dialogConfig)
+    this.dialog.open(BoatNewComponent, dialogConfig)
   }
 
   private retrieveAllBoatBoards(): void {
