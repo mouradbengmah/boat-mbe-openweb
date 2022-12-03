@@ -20,6 +20,9 @@
 							<button mat-raised-button color="primary" routerLink="/boat/details/{{boat.id}}">
 								Voir le détail
 							</button>
+							<button mat-raised-button color="warn" (click)="confirmerSuppressionBateau(boat.id)">
+								Supprimer
+							</button>
 						</mat-card-actions>
 					</mat-card>
 				</mat-nav-list>

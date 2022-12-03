@@ -28,7 +28,9 @@ export class BoatComponent implements OnInit {
     dialogConfig.data = {
       boat: new Boat()
     };
-    this.dialog.open(BoatNewComponent, dialogConfig).afterClosed().subscribe(() => { this.retrieveAllBoat(); } );
+    this.dialog.open(BoatNewComponent, dialogConfig).afterClosed().subscribe(() => {
+      this.retrieveAllBoat();
+    });
   }
 
   private retrieveAllBoat(): void {
@@ -38,6 +40,18 @@ export class BoatComponent implements OnInit {
         this.boatList = response;
       }
     )
+  }
+
+  supprimerUnBateau(id: number): void {
+    this.boatService.supprimerUnBateau(id).subscribe(() => {
+      this.retrieveAllBoat();
+    });
+  }
+
+  confirmerSuppressionBateau(id: number) {
+    if (confirm("Êtes vous sûr de vouloir supprimer le bateau ?")) {
+      this.supprimerUnBateau(id);
+    }
   }
 
 }

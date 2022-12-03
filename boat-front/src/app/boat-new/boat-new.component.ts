@@ -37,12 +37,7 @@ export class BoatNewComponent implements OnInit {
     this.nom = this.form.get('nom')?.value;
     this.description = this.form.get('description')?.value;
     if (this.nom) {
-      this.boatService.enregistrerUnBateau(this.nom, this.description).subscribe(
-
-        response => {
-          console.log(response)
-        }
-      )
+      this.boatService.enregistrerUnBateau(this.nom, this.description).subscribe();
     }
     this.dialogRef.close();
   }

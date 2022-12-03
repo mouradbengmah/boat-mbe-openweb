@@ -18,6 +18,7 @@ import { MatInputModule } from "@angular/material/input";
 import { MatSelectModule } from "@angular/material/select";
 import { MatCardModule } from "@angular/material/card";
 import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatSnackBarModule } from "@angular/material/snack-bar";
 
 import { BoatNewComponent } from './boat-new/boat-new.component';
 import { BoatDetailsComponent } from './boat-details/boat-details.component';
@@ -44,7 +45,8 @@ import { BoatDetailsComponent } from './boat-details/boat-details.component';
     MatInputModule,
     MatSelectModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

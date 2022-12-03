@@ -32,6 +32,10 @@ export class BoatService {
     );
   }
 
+  supprimerUnBateau(id: number): Observable<Boat> {
+    return this.http.delete<Boat>(this.boatApiUrl + '/boat/' + id);
+  }
+
   private preparerJsonObject(nom: string, description: string) {
     const object = {
       nom: nom,
