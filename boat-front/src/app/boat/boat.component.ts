@@ -19,7 +19,7 @@ export class BoatComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.retrieveAllBoatBoards();
+    this.retrieveAllBoat();
   }
 
   ouvrirDialogPourNouveauBateau(): void {
@@ -28,10 +28,10 @@ export class BoatComponent implements OnInit {
     dialogConfig.data = {
       boat: new Boat()
     };
-    this.dialog.open(BoatNewComponent, dialogConfig)
+    this.dialog.open(BoatNewComponent, dialogConfig).afterClosed().subscribe(() => { this.retrieveAllBoat(); } );
   }
 
-  private retrieveAllBoatBoards(): void {
+  private retrieveAllBoat(): void {
     this.boatService.recupererLesBateaux().subscribe(
 
       response => {
