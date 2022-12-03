@@ -23,6 +23,6 @@ public class Boat {
 	@Column(name = "nom")
 	private String nom;
 	
-	@Column(name = "description")
+	@Column(name = "description", columnDefinition="TEXT")
 	private String description;
 }
