@@ -79,7 +79,7 @@ public class BoatController {
 			Optional<Boat> optBoat = boatService.recupererUnBateauParId(id);
 			if (optBoat.isPresent()) {
 				boatService.supprimerUnBateau(optBoat.get());
-				return new ResponseEntity<>(String.format("Bateau : %d supprimé", id), HttpStatus.OK);
+				return new ResponseEntity<>(HttpStatus.OK);
 			} else {
 				return noBoatFoundResponse(id);
 			}
