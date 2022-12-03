@@ -1,0 +1,39 @@
+<div class="page" fxLayoutAlign="center">
+	<div fxFlex="70%">
+		<div class="content">
+			<div class="contact">
+				<form (ngSubmit)="onSubmit()" [formGroup]="form" fxLayout="column">
+					<div fxLayoutAlign="center">
+						<h1>Modification d'un bateau</h1>
+					</div>
+
+					<div fxLayoutAlign="center">
+						<mat-form-field appearance="outline">
+							<mat-label for="nom">Nom</mat-label>
+							<input matInput id="nom" name="nom" formControlName="nom">
+							<mat-error
+								*ngIf="form.get('nom')?.invalid && (form.get('nom')?.dirty || form.get('nom')?.touched)">
+								Le nom est <strong>obligatoire</strong>
+							</mat-error>
+						</mat-form-field>
+					</div>
+
+					<div fxLayoutAlign="center">
+						<mat-form-field appearance="outline">
+							<mat-label>Description</mat-label>
+							<textarea matInput id="description" name="description" formControlName="description"></textarea>
+							<mat-error *ngIf="form.get('description')?.valid || form.get('description')?.pristine">
+								Le description est <strong>obligatoire</strong>
+							</mat-error>
+						</mat-form-field>
+					</div>
+
+					<div fxLayoutAlign="center">
+						<button mat-raised-button color="primary" type="submit">Valider</button>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</div>

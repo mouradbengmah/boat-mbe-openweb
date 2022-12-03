@@ -16,14 +16,17 @@
 						</mat-card-header>
 						<mat-card-content fxFlex>
 						</mat-card-content>
-						<mat-card-actions>
-							<button mat-raised-button color="primary" routerLink="/boat/details/{{boat.id}}">
+						<div fxLayoutAlign="space-around center">
+							<button mat-raised-button routerLink="/boat/details/{{boat.id}}">
 								Voir le détail
+							</button>
+							<button mat-raised-button color="primary" routerLink="/boat/edit/{{boat.id}}">
+								Modifier
 							</button>
 							<button mat-raised-button color="warn" (click)="confirmerSuppressionBateau(boat.id)">
 								Supprimer
 							</button>
-						</mat-card-actions>
+						</div>
 					</mat-card>
 				</mat-nav-list>
 			</div>

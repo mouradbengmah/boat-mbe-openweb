@@ -1,6 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { BoatService } from '../service/boat.service';
 
 @Component({
@@ -18,7 +19,8 @@ export class BoatNewComponent implements OnInit {
     private fb: FormBuilder,
     private dialogRef: MatDialogRef<BoatNewComponent>,
     @Inject(MAT_DIALOG_DATA) data: any,
-    private boatService: BoatService) {
+    private boatService: BoatService,
+    private _snackBar: MatSnackBar) {
 
     this.form = fb.group({
       nom: [this.nom, Validators.required],
@@ -40,6 +42,7 @@ export class BoatNewComponent implements OnInit {
       this.boatService.enregistrerUnBateau(this.nom, this.description).subscribe();
     }
     this.dialogRef.close();
+    this._snackBar.open('Succès', 'Le bateau a bien été crée.');
   }
 
 }

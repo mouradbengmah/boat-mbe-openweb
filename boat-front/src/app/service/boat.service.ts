@@ -32,6 +32,17 @@ export class BoatService {
     );
   }
 
+  modifierUnBateau(id: number, nom: string, description: string): Observable<string> {
+    let headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    let options = { headers: headers };
+    let jsonObject = this.preparerJsonObject(nom, description);
+    return this.http.put<string>(
+      this.boatApiUrl + '/boat/' + id,
+      jsonObject,
+      options
+    );
+  }
+
   supprimerUnBateau(id: number): Observable<Boat> {
     return this.http.delete<Boat>(this.boatApiUrl + '/boat/' + id);
   }

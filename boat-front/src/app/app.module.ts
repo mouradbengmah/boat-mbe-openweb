@@ -22,13 +22,15 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
 
 import { BoatNewComponent } from './boat-new/boat-new.component';
 import { BoatDetailsComponent } from './boat-details/boat-details.component';
+import { BoatEditComponent } from './boat-edit/boat-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BoatComponent,
     BoatNewComponent,
-    BoatDetailsComponent
+    BoatDetailsComponent,
+    BoatEditComponent
   ],
   imports: [
     BrowserModule,
