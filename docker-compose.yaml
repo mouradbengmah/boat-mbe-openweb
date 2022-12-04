@@ -37,7 +37,7 @@ services:
     build: ./boat-front
     container_name: boat-front
     ports:
-      - 80:4200
+      - 4200:80
     links:
       - boat-back
 
