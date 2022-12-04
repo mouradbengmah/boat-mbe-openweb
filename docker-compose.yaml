@@ -22,7 +22,7 @@ services:
     build: ./boat-back
     container_name: boat-back
     environment:
-      - DB_SERVER=boat-postgres:5433
+      - DB_SERVER=boat-postgres
       - POSTGRES_DB=boat
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=root
