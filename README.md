@@ -14,7 +14,16 @@ Le projet est découpé en 3 container Docker :
 
 Le projet peut être lancé localement et est disponible à l'adresse suivante: **http://localhost:4200/**
 
+Un version en ligne du projet et disponible à l'adresse suivante (jusqu'au 17.12.2022) : **http://13.37.29.156:4200/**
+
 ---
+
+### Remarque importantes
+Etant donnée le temps imparti de l'exercice, les points suivants doivent être mentionnées :
+- Aucune brique d'authentification n'a été mis en place
+- Les applications ont été condensés en un seul et unique projet Git pour simplifier la lecture
+- Il n'y a pas d'internationalisation, les textes sont hard codés au lieu de faire l'objet d'un fichier dédié
+- L'application n'est pas responsive et ne s'adpate pas aux versions mobiles
 
 ### Prérequis
 
